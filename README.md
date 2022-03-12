@@ -1,2 +1,7 @@
 # multi_installation_tool
-my tool for quickly downloading things
+
+Tool to quickly open download sites of very commonly used software
+
+STILL IN DEVELOPMENT
+
+District 14 :)
