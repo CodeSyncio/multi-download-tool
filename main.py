@@ -1,16 +1,18 @@
-import os
+#import fuctions
+
+import os             
 import time
-from tracemalloc import start
-from turtle import goto 
-
-
 import webbrowser
 
 
+#clear console command
 
 def cls():                                         
-    os.system('cls' if os.name=='nt' else 'clear')     #used for console clearing
+    os.system('cls' if os.name=='nt' else 'clear')     
 
+
+
+#used to kill all running browser processes (avoid a big mess)
 
 def clrbrowsers() :
 
@@ -28,6 +30,10 @@ def clrbrowsers() :
     cls()
   
 clrbrowsers()
+
+
+#main fuction of program
+
 def startmenu():
     
     cls()
@@ -163,7 +169,7 @@ def startmenu():
 
 
         
-        
+#calls main function      
         
 startmenu()
         
