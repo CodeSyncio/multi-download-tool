@@ -166,7 +166,8 @@ def startmenu():
         cls()
         print('Opening downloads in 3 sec...')
         time.sleep (3)
-        webbrowser.open('///')
+        webbrowser.open('https://www.msi.com/Landing/afterburner/graphics-cards')
+        webbrowser.open('https://www.techpowerup.com/download/techpowerup-throttlestop/')
         prsenter = input('press enter to choose another option...')
         startmenu()
 
