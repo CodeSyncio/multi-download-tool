@@ -43,6 +43,8 @@ def startmenu():
     print ('[2] Game Launchers')
     print ('[3] Internet (browsers etc.)')
     print ('[4] Utilities')
+    print ('[5] Overclocking')
+    print ('[6] my discord :)')
 
     MainOptChoise = input()
 
@@ -160,7 +162,21 @@ def startmenu():
             startmenu()
 
 
+    elif MainOptChoise == '5' :
+        cls()
+        print('Opening downloads in 3 sec...')
+        time.sleep (3)
+        webbrowser.open('///')
+        prsenter = input('press enter to choose another option...')
+        startmenu()
 
+    elif MainOptChoise == '6' :
+        cls()
+        print('Opening my site in 3 sec...')
+        time.sleep (3)
+        webbrowser.open('https://sites.google.com/view/district14/homepage')
+        prsenter = input('press enter to choose another option...')
+        startmenu()
 
 
 
