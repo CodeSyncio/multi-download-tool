@@ -1,6 +1,7 @@
 #import fuctions
 
-import os             
+import os
+from pkgutil import extend_path             
 import time
 import webbrowser
 
@@ -44,7 +45,9 @@ def startmenu():
     print ('[3] Internet (browsers etc.)')
     print ('[4] Utilities')
     print ('[5] Overclocking')
-    print ('[6] my discord :)')
+    print ('[6] Usefull Extensions (browsers)')
+    print ('[9] my discord :)')
+    
 
     MainOptChoise = input()
 
@@ -171,7 +174,49 @@ def startmenu():
         prsenter = input('press enter to choose another option...')
         startmenu()
 
+    
     elif MainOptChoise == '6' :
+        cls()
+        print('Choose your browser: \n\n\n')
+        print('[1] Any chromium based browser')
+        print('[2] Firefox (tor)')
+        ExtOpt = input()
+
+        if ExtOpt == '1':
+            cls()
+            print('Opening downloads in 3 sec...')
+            time.sleep (3)
+            webbrowser.open('^^linktochromiumextensions^^')
+            
+            prsenter = input('press enter to choose another option...')
+            startmenu()
+
+        elif ExtOpt == '2':
+            cls()
+            print('Opening downloads in 3 sec...')
+            time.sleep (3)
+            webbrowser.open('^^linktofirefoxextensions^^')
+            
+            prsenter = input('press enter to choose another option...')
+            startmenu()
+
+
+        
+
+
+
+        prsenter = input('press enter to choose another option...')
+        startmenu()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    elif MainOptChoise == '9' :
         cls()
         print('Opening my site in 3 sec...')
         time.sleep (3)
