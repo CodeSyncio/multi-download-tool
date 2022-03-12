@@ -188,6 +188,11 @@ def startmenu():
         
 #calls main function      
         
+
+print('made by me :)')
+
+time.sleep (3)
+cls()
 startmenu()
         
 
