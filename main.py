@@ -4,12 +4,17 @@ import os
 from pkgutil import extend_path             
 import time
 import webbrowser
-
+import linecache
 
 #clear console command
 
 def cls():                                         
     os.system('cls' if os.name=='nt' else 'clear')     
+
+
+
+
+
 
 
 
@@ -21,14 +26,13 @@ def clrbrowsers() :
     
     os.system("taskkill /im brave.exe /f") 
     cls()
-    os.system("taskkill /im chrome.exe /f")
+    os.system("taskkill /im msedge.exe /f") 
     cls()
-    os.system("taskkill /im firefox.exe /f")
+    os.system("taskkill /im chrome.exe /f") 
     cls()
-    os.system("taskkill /im msedge.exe /f")
+    os.system("taskkill /im firefox.exe /f") 
     cls()
-    os.system("taskkill /im iexplorer.exe /f")
-    cls()
+   
   
 clrbrowsers()
 
@@ -54,12 +58,19 @@ def startmenu():
     if MainOptChoise == '1' :
         cls()
         print('Opening Downloads in 3 sec...')
-
-        time.sleep (3)
         
-        webbrowser.open('https://ninite.com/')
-        webbrowser.open('https://patchmypc.com/freeupdater')
-        webbrowser.open('https://ruckzuck.tools/')
+        
+        webbrowser.open_new_tab(linecache.getline('blank_tools_config.txt', 1))
+        webbrowser.open_new_tab(linecache.getline('blank_tools_config.txt', 2))
+        webbrowser.open_new_tab(linecache.getline('blank_tools_config.txt', 3))
+        webbrowser.open_new_tab(linecache.getline('blank_tools_config.txt', 4))
+        webbrowser.open_new_tab(linecache.getline('blank_tools_config.txt', 5))
+        webbrowser.open_new_tab(linecache.getline('blank_tools_config.txt', 6))
+        webbrowser.open_new_tab(linecache.getline('blank_tools_config.txt', 7))
+        webbrowser.open_new_tab(linecache.getline('blank_tools_config.txt', 8))
+        webbrowser.open_new_tab(linecache.getline('blank_tools_config.txt', 9))
+        webbrowser.open_new_tab(linecache.getline('blank_tools_config.txt', 10))
+        
 
 
 
@@ -71,9 +82,16 @@ def startmenu():
         cls()
         print('Opening Downloads in 3 sec...')
         time.sleep (3)
-        webbrowser.open('https://store.steampowered.com/about/')
-        webbrowser.open('https://www.origin.com/bel/nl-nl/store/download')
-        webbrowser.open('https://www.minecraft.net/nl-nl/download')
+        webbrowser.open_new_tab(linecache.getline('game_launchers_config.txt', 1))
+        webbrowser.open_new_tab(linecache.getline('game_launchers_config.txt', 2))
+        webbrowser.open_new_tab(linecache.getline('game_launchers_config.txt', 3))
+        webbrowser.open_new_tab(linecache.getline('game_launchers_config.txt', 4))
+        webbrowser.open_new_tab(linecache.getline('game_launchers_config.txt', 5))
+        webbrowser.open_new_tab(linecache.getline('game_launchers_config.txt', 6))
+        webbrowser.open_new_tab(linecache.getline('game_launchers_config.txt', 7))
+        webbrowser.open_new_tab(linecache.getline('game_launchers_config.txt', 8))
+        webbrowser.open_new_tab(linecache.getline('game_launchers_config.txt', 9))
+        webbrowser.open_new_tab(linecache.getline('game_launchers_config.txt', 10))
         prsenter = input('press enter to choose another option...')
         startmenu()
 
@@ -93,14 +111,14 @@ def startmenu():
             cls()
             print('Opening Download in 3 sec...')
             time.sleep (3)
-            webbrowser.open('https://brave.com/download/')
+            webbrowser.open_new_tab('https://brave.com/download/')
             prsenter = input('press enter to choose another option...')
             startmenu()
         elif BrowserChoise == '2':
             cls()
             print('Opening Download in 3 sec...')
             time.sleep (3)
-            webbrowser.open('https://www.mozilla.org/nl/firefox/new/')
+            webbrowser.open_new_tab('https://www.mozilla.org/nl/firefox/new/')
             prsenter = input('press enter to choose another option...')
             startmenu()
 
@@ -108,7 +126,7 @@ def startmenu():
             cls()
             print('Opening Download in 3 sec...')
             time.sleep (3)
-            webbrowser.open('https://www.torproject.org/download/')
+            webbrowser.open_new_tab('https://www.torproject.org/download/')
             prsenter = input('press enter to choose another option...')
             startmenu()
 
@@ -116,7 +134,7 @@ def startmenu():
             cls()
             print('Opening Download in 3 sec...')
             time.sleep (3)
-            webbrowser.open('https://www.google.com/intl/en/chrome/')
+            webbrowser.open_new_tab('https://www.google.com/intl/en/chrome/')
             prsenter = input('press enter to choose another option...')
             startmenu()
 
@@ -136,7 +154,7 @@ def startmenu():
             cls()
             print('Opening Download in 3 sec...')
             time.sleep (3)
-            webbrowser.open('https://www.qbittorrent.org/download.php')
+            webbrowser.open_new_tab('https://www.qbittorrent.org/download.php')
             prsenter = input('press enter to choose another option...')
             startmenu()
 
@@ -144,7 +162,7 @@ def startmenu():
             cls()
             print('Opening Download in 3 sec...')
             time.sleep (3)
-            webbrowser.open('https://www.fosshub.com/WinDirStat.html')
+            webbrowser.open_new_tab('https://www.fosshub.com/WinDirStat.html')
             prsenter = input('press enter to choose another option...')
             startmenu()
 
@@ -152,7 +170,7 @@ def startmenu():
             cls()
             print('Opening Download in 3 sec...')
             time.sleep (3)
-            webbrowser.open('https://nl.malwarebytes.com/mwb-download/')
+            webbrowser.open_new_tab('https://nl.malwarebytes.com/mwb-download/')
             prsenter = input('press enter to choose another option...')
             startmenu()
 
@@ -160,7 +178,7 @@ def startmenu():
             cls()
             print('Opening Download in 3 sec...')
             time.sleep (3)
-            webbrowser.open('https://code.visualstudio.com/download')
+            webbrowser.open_new_tab('https://code.visualstudio.com/download')
             prsenter = input('press enter to choose another option...')
             startmenu()
 
@@ -169,8 +187,16 @@ def startmenu():
         cls()
         print('Opening downloads in 3 sec...')
         time.sleep (3)
-        webbrowser.open('https://www.msi.com/Landing/afterburner/graphics-cards')
-        webbrowser.open('https://www.techpowerup.com/download/techpowerup-throttlestop/')
+        webbrowser.open_new_tab(linecache.getline('overclocking_config.txt', 1))
+        webbrowser.open_new_tab(linecache.getline('overclocking_config.txt', 2))
+        webbrowser.open_new_tab(linecache.getline('overclocking_config.txt', 3))
+        webbrowser.open_new_tab(linecache.getline('overclocking_config.txt', 4))
+        webbrowser.open_new_tab(linecache.getline('overclocking_config.txt', 5))
+        webbrowser.open_new_tab(linecache.getline('overclocking_config.txt', 6))
+        webbrowser.open_new_tab(linecache.getline('overclocking_config.txt', 7))
+        webbrowser.open_new_tab(linecache.getline('overclocking_config.txt', 8))
+        webbrowser.open_new_tab(linecache.getline('overclocking_config.txt', 9))
+        webbrowser.open_new_tab(linecache.getline('overclocking_config.txt', 10))
         prsenter = input('press enter to choose another option...')
         startmenu()
 
@@ -186,7 +212,16 @@ def startmenu():
             cls()
             print('Opening downloads in 3 sec...')
             time.sleep (3)
-            webbrowser.open('^^linktochromiumextensions^^')
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_chromium_config.txt', 1))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_chromium_config.txt', 2))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_chromium_config.txt', 3))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_chromium_config.txt', 4))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_chromium_config.txt', 5))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_chromium_config.txt', 6))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_chromium_config.txt', 7))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_chromium_config.txt', 8))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_chromium_config.txt', 9))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_chromium_config.txt', 10))
             
             prsenter = input('press enter to choose another option...')
             startmenu()
@@ -195,7 +230,16 @@ def startmenu():
             cls()
             print('Opening downloads in 3 sec...')
             time.sleep (3)
-            webbrowser.open('^^linktofirefoxextensions^^')
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_firefox_config.txt', 1))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_firefox_config.txt', 2))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_firefox_config.txt', 3))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_firefox_config.txt', 4))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_firefox_config.txt', 5))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_firefox_config.txt', 6))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_firefox_config.txt', 7))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_firefox_config.txt', 8))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_firefox_config.txt', 9))
+            webbrowser.open_new_tab(linecache.getline('usefull_extensions_firefox_config.txt', 10))
             
             prsenter = input('press enter to choose another option...')
             startmenu()
@@ -220,7 +264,7 @@ def startmenu():
         cls()
         print('Opening my site in 3 sec...')
         time.sleep (3)
-        webbrowser.open('https://sites.google.com/view/district14/homepage')
+        webbrowser.open_new_tab('https://sites.google.com/view/district14/homepage')
         prsenter = input('press enter to choose another option...')
         startmenu()
 
@@ -236,7 +280,7 @@ def startmenu():
 
 print('made by me :)')
 
-time.sleep (3)
+time.sleep (1)
 cls()
 startmenu()
         
