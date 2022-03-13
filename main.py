@@ -1,12 +1,11 @@
-#import fuctions
+#imports all required functions
 
-import os
-from pkgutil import extend_path             
+import os          
 import time
 import webbrowser
 import linecache
 
-#clear console command
+#function to clear the console (windows based operating system = "cls", linux based operating systems = "clear")
 
 def cls():                                         
     os.system('cls' if os.name=='nt' else 'clear')     
@@ -18,7 +17,7 @@ def cls():
 
 
 
-#used to kill all running browser processes (avoid a big mess)
+#function to kill your browser windows after opening a different category (to avoid big RAM usage)
 
 def clrbrowsers() :
 
@@ -37,12 +36,12 @@ def clrbrowsers() :
 clrbrowsers()
 
 
-#main fuction of program
+#defining of main program function starts here
 
 def startmenu():
     
     cls()
-    print ('[Choose a number corresponding to an option]')
+    print ('[Choose a number corresponding to an option]')  
     print ('OPTIONS: \n \n \n')
     print ('[1] Tools for after blank windows installation')
     print ('[2] Game Launchers')
@@ -55,7 +54,7 @@ def startmenu():
 
     MainOptChoise = input()
 
-    if MainOptChoise == '1' :
+    if MainOptChoise == '1' :        
         cls()
         print('Opening Downloads in 3 sec...')
         
@@ -77,7 +76,7 @@ def startmenu():
 
         prsenter = input('press enter to choose another option...')
         startmenu()
-    elif MainOptChoise == '2' :
+    elif MainOptChoise == '2' :      
         
         cls()
         print('Opening Downloads in 3 sec...')
@@ -96,7 +95,7 @@ def startmenu():
         startmenu()
 
 
-    elif MainOptChoise == '3' :
+    elif MainOptChoise == '3' :    
         cls()
         print ('Choose wich browser... \n\n\n')
         print ('[1] Brave')
