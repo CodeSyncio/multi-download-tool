@@ -8,4 +8,7 @@ https://www.minecraft.net/nl-nl/download
 
 
 
-#end of file
+#end of finder/start of info
+1 == steam
+2 == origin
+3 == minecraft (ofcourse)

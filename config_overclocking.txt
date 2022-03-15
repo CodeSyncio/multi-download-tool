@@ -8,4 +8,6 @@ https://www.techpowerup.com/download/techpowerup-throttlestop/
 
 
 
-#end of file
+#end of finder/start of info
+1 == msi afterburner, used for gpu overclocking/monitoring
+1 == throttlestop, used for cpu overclcoking
