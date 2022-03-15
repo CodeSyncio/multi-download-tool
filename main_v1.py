@@ -9,6 +9,7 @@ co = 'config_overclocking.txt'
 cg = 'config_games.txt'
 od = 'Opening Download(s) in 3 sec...'
 pe = 'press enter to choose another option...'
+conu = 'config_utils.txt'
 p = print
 def cls():                                         
     os.system('cls' if os.name=='nt' else 'clear')     
@@ -105,37 +106,85 @@ def sm():
     elif Main == '4' :
         cls()
         p ('Choose wich utility... \n\n\n')
-        p ('[1] qBittorrent')
-        p ('[2] WinDirStat')
-        p ('[3] Malwarebytes')
-        p ('[4] visual Studio')
+        p (gl(conu,1))
+        p (gl(conu,2))
+        p (gl(conu,3))
+        p (gl(conu,4))
+        p (gl(conu,5))
+        p (gl(conu,6))
+        p (gl(conu,7))
+        p (gl(conu,8))
+        p (gl(conu,9))
+        p (gl(conu,10))
         uch = input()
         if uch == '1':
             cls()
             p(od)
             ts (3)
-            nw('https://www.qbittorrent.org/download.php')
+            nw(gl(conu, 12))
             pse = input(pe)
             sm()
         elif uch == '2':
             cls()
             p(od)
             ts (3)
-            nw('https://www.fosshub.com/WinDirStat.html')
+            nw(gl(conu, 13))
             pse = input(pe)
             sm()
         elif uch == '3':
             cls()
             p(od)
             ts (3)
-            nw('https://nl.malwarebytes.com/mwb-download/')
+            nw(gl(conu, 14))
             pse = input(pe)
             sm()
         elif uch == '4':
             cls()
             p(od)
             ts (3)
-            nw('https://code.visualstudio.com/download')
+            nw(gl(conu, 15))
+            pse = input(pe)
+            sm()
+        elif uch == '5':
+            cls()
+            p(od)
+            ts (3)
+            nw(gl(conu, 16))
+            pse = input(pe)
+            sm()
+        elif uch == '6':
+            cls()
+            p(od)
+            ts (3)
+            nw(gl(conu, 17))
+            pse = input(pe)
+            sm()
+        elif uch == '7':
+            cls()
+            p(od)
+            ts (3)
+            nw(gl(conu, 18))
+            pse = input(pe)
+            sm()
+        elif uch == '8':
+            cls()
+            p(od)
+            ts (3)
+            nw(gl(conu, 19))
+            pse = input(pe)
+            sm()
+        elif uch == '9':
+            cls()
+            p(od)
+            ts (3)
+            nw(gl(conu, 20))
+            pse = input(pe)
+            sm()
+        elif uch == '10':
+            cls()
+            p(od)
+            ts (3)
+            nw(gl(conu, 21))
             pse = input(pe)
             sm()
     elif Main == '5' :
