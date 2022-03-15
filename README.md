@@ -11,11 +11,11 @@
 
 #unctions already implemented:
 
-*customizable links (most of them)
-*checks default browser (more easy to use)
-*kills processes after each download (less load on RAM)
-*minimized the code to make it more lightweigt
-*console commands supported for multiple OS'es (full support for win based OS'es or linux distro's)
+!customizable links (most of them)
+!checks default browser (more easy to use)
+!kills processes after each download (less load on RAM)
+!minimized the code to make it more lightweigt
+!console commands supported for multiple OS'es (full support for win based OS'es or linux distro's)
 
 
 
