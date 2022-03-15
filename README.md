@@ -2,14 +2,14 @@
 
 #This tool allows you to:
 
-*quickly open links to download programs
-*customize all the links yourself with an easy and straightforward method
-*open the links with your default set browser
-*automatically kills the browser process to make it easy to download each time
+!quickly open links to download programs
+!customize all the links yourself with an easy and straightforward method
+!open the links with your default set browser
+!automatically kills the browser process to make it easy to download each time
 
 
 
-#functions already implemented:
+#unctions already implemented:
 
 *customizable links (most of them)
 *checks default browser (more easy to use)
@@ -21,6 +21,6 @@
 
 #functions i still have to do:
 
-*make it even more lightweight
-*better con clearing
-*make time intervals shorter (not so important)
+!make it even more lightweight
+!better con clearing
+!make time intervals shorter (not so important)
