@@ -1,25 +1,26 @@
 # multi_installation_tool
 
-This tool alows you to quickly download software wich is set by default or you configured yourself.
+#This tool allows you to:
+
+*quickly open links to download programs
+*customize all the links yourself with an easy and straightforward method
+*open the links with your default set browser
+*automatically kills the browser process to make it easy to download each time
 
 
 
+#functions already implemented:
 
-*Most categories have a file named config_'<CategoryName>
-
-each config file has 10 lines for possible download links, with on the end of every file the "#end of file " indicator to
-indicate the end of the file.
-
-
-
-*Rules for links:
-
--starts with https:// or http://   (anything else will NOT work)
-
--has a correct domain: .com , .net , .example , ...
+*customizable links (most of them)
+*checks default browser (more easy to use)
+*kills processes after each download (less load on RAM)
+*minimized the code to make it more lightweigt
+*console commands supported for multiple OS'es (full support for win based OS'es or linux distro's)
 
 
 
-STILL IN DEVELOPMENT
+#functions i still have to do:
 
-District 14 :)
+*make it even more lightweight
+*better con clearing
+*make time intervals shorter (not so important)
