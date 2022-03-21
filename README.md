@@ -1,3 +1,8 @@
 # multi-download-tool
-this tool is still beeing devoloped
-:)
+Tool made to be able to easily download common software onto resetted / new pc's
+ 
+ 
+ 
+ 
+ 
+ 
