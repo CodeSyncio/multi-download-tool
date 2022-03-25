@@ -7,9 +7,11 @@ fext = 'config_firefox_extensions.txt'
 cob = 'config_blank.txt'
 co = 'config_overclocking.txt'
 cg = 'config_games.txt'
-od = 'Opening Download(s) in 3 sec...'
+def od():
+    p('Opening Download(s) in ' + str(s) + ' second(s)')
 pe = 'press enter to choose another option...'
 conu = 'config_utils.txt'
+s = 1 #waiting time between pressing enters
 p = print
 def cls():                                         
     os.system('cls' if os.name=='nt' else 'clear')     
@@ -37,8 +39,8 @@ def sm():
     Main = input()
     if Main == '1' :        
         cls()
-        p(od)
-        ts (3)
+        od()
+        ts (s)
         cobcounter = 1
         for number in range(10):
             nw(gl(cob, cobcounter))
@@ -48,8 +50,8 @@ def sm():
         sm()
     elif Main == '2' :      
         cls()
-        p(od)
-        ts (3)
+        od()
+        ts (s)
         gcounter = 1
         for number in range(10):
                 nw(gl(cg, gcounter))
@@ -66,29 +68,29 @@ def sm():
         Brch = input()
         if Brch == '1':
             cls()
-            p(od)
-            ts (3)
+            od()
+            ts (s)
             nw('https://brave.com/download/')
             pse = input(pe)
             sm()
         elif Brch == '2':
             cls()
-            p(od)
-            ts (3)
+            od()
+            ts (s)
             nw('https://www.mozilla.org/nl/firefox/new/')
             pse = input(pe)
             sm()
         elif Brch == '3':
             cls()
-            p(od)
-            ts (3)
+            od()
+            ts (s)
             nw('https://www.torproject.org/download/')
             pse = input(pe)
             sm()
         elif Brch == '4':
             cls()
-            p(od)
-            ts (3)
+            od()
+            ts (s)
             nw('https://www.google.com/intl/en/chrome/')
             pse = input(pe)
             sm()
@@ -105,13 +107,13 @@ def sm():
         for number in range(10):
             if uch == utilcounter :
                 cls()
-                p(od)
-                ts (3)
+                od()
+                ts (s)
                 nw(gl(conu, 11 + uch))
     elif Main == '5' :
         cls()
-        p(od)
-        ts (3)
+        od()
+        ts (s)
         occounter = 1
         for number in range(10):
             nw(gl(co, occounter))
@@ -126,8 +128,8 @@ def sm():
         ExtOpt = input()
         if ExtOpt == '1':
             cls()
-            p(od)
-            ts (3)
+            od()
+            ts (s)
             extcounter = 1
             for number in range(10):
                 nw(gl(cext, extcounter))
@@ -136,8 +138,8 @@ def sm():
             sm()
         elif ExtOpt == '2':
             cls()
-            p(od)
-            ts (3)
+            od()
+            ts (s)
             extcounter = 1
             for number in range(10):
                 nw(gl(fext, extcounter))
@@ -148,8 +150,8 @@ def sm():
         sm()
     elif Main == '9' :
         cls()
-        p('Opening my site in 3 sec...')
-        ts (3)
+        od()
+        ts (s)
         nw('https://sites.google.com/view/district14/homepage')
         pse = input(pe)
         sm()
@@ -159,5 +161,3 @@ p('made by me :)')
 ts (1)
 cls()
 sm()
-        
-
