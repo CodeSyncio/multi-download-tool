@@ -22,8 +22,8 @@ def cb() :
     cls()
     os.system("taskkill /im firefox.exe /f") 
     cls()
-cb()
 def sm():
+    cb()
     cls()
     p ('[Choose a number corresponding to an option]')  
     p ('OPTIONS: \n \n \n')
@@ -39,38 +39,27 @@ def sm():
         cls()
         p(od)
         ts (3)
-        nw(gl(cob, 1))
-        nw(gl(cob, 2))
-        nw(gl(cob, 3))
-        nw(gl(cob, 4))
-        nw(gl(cob, 5))
-        nw(gl(cob, 6))
-        nw(gl(cob, 7))
-        nw(gl(cob, 8))
-        nw(gl(cob, 9))
-        nw(gl(cob, 10))
+        cobcounter = 1
+        for number in range(10):
+            nw(gl(cob, cobcounter))
+            cobcounter = cobcounter + 1
+        
         pse = input(pe)
         sm()
     elif Main == '2' :      
         cls()
         p(od)
         ts (3)
-        nw(gl(cg, 1))
-        nw(gl(cg, 2))
-        nw(gl(cg, 3))
-        nw(gl(cg, 4))
-        nw(gl(cg, 5))
-        nw(gl(cg, 6))
-        nw(gl(cg, 7))
-        nw(gl(cg, 8))
-        nw(gl(cg, 9))
-        nw(gl(cg, 10))
+        gcounter = 1
+        for number in range(10):
+                nw(gl(cg, gcounter))
+                gcounter = gcounter + 1
         pse = input(pe)
         sm()
     elif Main == '3' :    
         cls()
         p ('Choose wich browser... \n\n\n')
-        p ('[1] Brve')
+        p ('[1] Brave')
         p ('[2] firefox')
         p ('[3] TOR')
         p ('[4] google chrome')
@@ -106,101 +95,27 @@ def sm():
     elif Main == '4' :
         cls()
         p ('Choose wich utility... \n\n\n')
-        p (gl(conu,1))
-        p (gl(conu,2))
-        p (gl(conu,3))
-        p (gl(conu,4))
-        p (gl(conu,5))
-        p (gl(conu,6))
-        p (gl(conu,7))
-        p (gl(conu,8))
-        p (gl(conu,9))
-        p (gl(conu,10))
+        conunames = 1
+        for number in range(10):
+            p (gl(conu,conunames))
+            conunames = conunames + 1
         uch = input()
-        if uch == '1':
-            cls()
-            p(od)
-            ts (3)
-            nw(gl(conu, 12))
-            pse = input(pe)
-            sm()
-        elif uch == '2':
-            cls()
-            p(od)
-            ts (3)
-            nw(gl(conu, 13))
-            pse = input(pe)
-            sm()
-        elif uch == '3':
-            cls()
-            p(od)
-            ts (3)
-            nw(gl(conu, 14))
-            pse = input(pe)
-            sm()
-        elif uch == '4':
-            cls()
-            p(od)
-            ts (3)
-            nw(gl(conu, 15))
-            pse = input(pe)
-            sm()
-        elif uch == '5':
-            cls()
-            p(od)
-            ts (3)
-            nw(gl(conu, 16))
-            pse = input(pe)
-            sm()
-        elif uch == '6':
-            cls()
-            p(od)
-            ts (3)
-            nw(gl(conu, 17))
-            pse = input(pe)
-            sm()
-        elif uch == '7':
-            cls()
-            p(od)
-            ts (3)
-            nw(gl(conu, 18))
-            pse = input(pe)
-            sm()
-        elif uch == '8':
-            cls()
-            p(od)
-            ts (3)
-            nw(gl(conu, 19))
-            pse = input(pe)
-            sm()
-        elif uch == '9':
-            cls()
-            p(od)
-            ts (3)
-            nw(gl(conu, 20))
-            pse = input(pe)
-            sm()
-        elif uch == '10':
-            cls()
-            p(od)
-            ts (3)
-            nw(gl(conu, 21))
-            pse = input(pe)
-            sm()
+        utilcounter = 1
+        cls()
+        for number in range(10):
+            if uch == utilcounter :
+                cls()
+                p(od)
+                ts (3)
+                nw(gl(conu, 11 + uch))
     elif Main == '5' :
         cls()
         p(od)
         ts (3)
-        nw(gl(co, 1))
-        nw(gl(co, 2))
-        nw(gl(co, 3))
-        nw(gl(co, 4))
-        nw(gl(co, 5))
-        nw(gl(co, 6))
-        nw(gl(co, 7))
-        nw(gl(co, 8))
-        nw(gl(co, 9))
-        nw(gl(co, 10))
+        occounter = 1
+        for number in range(10):
+            nw(gl(co, occounter))
+            occounter = occounter + 1
         pse = input(pe)
         sm()
     elif Main == '6' :
@@ -213,32 +128,20 @@ def sm():
             cls()
             p(od)
             ts (3)
-            nw(gl(cext, 1))
-            nw(gl(cext, 2))
-            nw(gl(cext, 3))
-            nw(gl(cext, 4))
-            nw(gl(cext, 5))
-            nw(gl(cext, 6))
-            nw(gl(cext, 7))
-            nw(gl(cext, 8))
-            nw(gl(cext, 9))
-            nw(gl(cext, 10))
+            extcounter = 1
+            for number in range(10):
+                nw(gl(cext, extcounter))
+                extcounter = extcounter + 1
             pse = input(pe)
             sm()
         elif ExtOpt == '2':
             cls()
             p(od)
             ts (3)
-            nw(gl(fext, 1))
-            nw(gl(fext, 2))
-            nw(gl(fext, 3))
-            nw(gl(fext, 4))
-            nw(gl(fext, 5))
-            nw(gl(fext, 6))
-            nw(gl(fext, 7))
-            nw(gl(fext, 8))
-            nw(gl(fext, 9))
-            nw(gl(fext, 10))
+            extcounter = 1
+            for number in range(10):
+                nw(gl(fext, extcounter))
+                extcounter = extcounter + 1
             pse = input(pe)
             sm()
         pse = input(pe)

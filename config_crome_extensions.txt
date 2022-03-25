@@ -8,5 +8,4 @@ https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijod
 https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo/related
 
 
-
 #end of finder/start of info
