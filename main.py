@@ -45,8 +45,6 @@ def sm():
         for number in range(10):
             nw(gl(cob, cobcounter))
             cobcounter = cobcounter + 1
-        
-        pse = input(pe)
         sm()
     elif Main == '2' :      
         cls()
@@ -56,7 +54,6 @@ def sm():
         for number in range(10):
                 nw(gl(cg, gcounter))
                 gcounter = gcounter + 1
-        pse = input(pe)
         sm()
     elif Main == '3' :    
         cls()
@@ -71,28 +68,24 @@ def sm():
             od()
             ts (s)
             nw('https://brave.com/download/')
-            pse = input(pe)
             sm()
         elif Brch == '2':
             cls()
             od()
             ts (s)
             nw('https://www.mozilla.org/nl/firefox/new/')
-            pse = input(pe)
             sm()
         elif Brch == '3':
             cls()
             od()
             ts (s)
             nw('https://www.torproject.org/download/')
-            pse = input(pe)
             sm()
         elif Brch == '4':
             cls()
             od()
             ts (s)
             nw('https://www.google.com/intl/en/chrome/')
-            pse = input(pe)
             sm()
     elif Main == '4' :
         cls()
@@ -118,7 +111,6 @@ def sm():
         for number in range(10):
             nw(gl(co, occounter))
             occounter = occounter + 1
-        pse = input(pe)
         sm()
     elif Main == '6' :
         cls()
@@ -134,7 +126,6 @@ def sm():
             for number in range(10):
                 nw(gl(cext, extcounter))
                 extcounter = extcounter + 1
-            pse = input(pe)
             sm()
         elif ExtOpt == '2':
             cls()
@@ -144,19 +135,16 @@ def sm():
             for number in range(10):
                 nw(gl(fext, extcounter))
                 extcounter = extcounter + 1
-            pse = input(pe)
             sm()
-        pse = input(pe)
         sm()
     elif Main == '9' :
         cls()
         od()
         ts (s)
         nw('https://sites.google.com/view/district14/homepage')
-        pse = input(pe)
         sm()
-        pse = input(pe)
-        sm()
+
+        
 p('made by me :)')
 ts (1)
 cls()
