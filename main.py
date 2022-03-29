@@ -7,6 +7,7 @@ fext = 'config_firefox_extensions.txt'
 cob = 'config_blank.txt'
 co = 'config_overclocking.txt'
 cg = 'config_games.txt'
+browsrprocnames = 'BrowserProcNames.conf'
 def od():
     p('Opening Download(s) in ' + str(s) + ' second(s)')
 pe = 'press enter to choose another option...'
@@ -16,16 +17,14 @@ p = print
 def cls():                                         
     os.system('cls' if os.name=='nt' else 'clear')     
 def cb() :
-    os.system("taskkill /im brave.exe /f") 
-    cls()
-    os.system("taskkill /im msedge.exe /f") 
-    cls()
-    os.system("taskkill /im chrome.exe /f") 
-    cls()
-    os.system("taskkill /im firefox.exe /f") 
-    cls()
+    procnamescounter = 1
+    for number in range (10) :
+        os.system("taskkill /im " + gl(browsrprocnames,procnamescounter) +" /f") 
+        cls()
+        procnamescounter = procnamescounter + 1
+    
 def sm():
-    cb()
+    
     cls()
     p ('[Choose a number corresponding to an option]')  
     p ('OPTIONS: \n \n \n')
@@ -37,7 +36,8 @@ def sm():
     p ('[6] Usefull Extensions (browsers)')
     p ('[9] my discord :)')
     Main = input()
-    if Main == '1' :        
+    if Main == '1' :  
+        cb()      
         cls()
         od()
         ts (s)
@@ -46,7 +46,8 @@ def sm():
             nw(gl(cob, cobcounter))
             cobcounter = cobcounter + 1
         sm()
-    elif Main == '2' :      
+    elif Main == '2' :
+        cb()      
         cls()
         od()
         ts (s)
@@ -55,7 +56,8 @@ def sm():
                 nw(gl(cg, gcounter))
                 gcounter = gcounter + 1
         sm()
-    elif Main == '3' :    
+    elif Main == '3' : 
+        cb()   
         cls()
         p ('Choose wich browser... \n\n\n')
         p ('[1] Brave')
@@ -88,6 +90,7 @@ def sm():
             nw('https://www.google.com/intl/en/chrome/')
             sm()
     elif Main == '4' :
+        cb()
         cls()
         p ('Choose wich utility... \n\n\n')
         conunames = 1
@@ -97,13 +100,18 @@ def sm():
         uch = input()
         utilcounter = 1
         cls()
-        for number in range(10):
-            if uch == utilcounter :
+        for number in range(11):
+            if int(uch) == utilcounter :
                 cls()
                 od()
                 ts (s)
-                nw(gl(conu, 11 + uch))
+                finallineutil = 11 +int(uch)
+                nw(gl(conu,finallineutil ))
+                sm()
+            else:
+                utilcounter = utilcounter + 1
     elif Main == '5' :
+        cb()
         cls()
         od()
         ts (s)
@@ -113,6 +121,7 @@ def sm():
             occounter = occounter + 1
         sm()
     elif Main == '6' :
+        cb()
         cls()
         p('Choose your browser: \n\n\n')
         p('[1] Any chromium based browser')
@@ -138,6 +147,7 @@ def sm():
             sm()
         sm()
     elif Main == '9' :
+        cb()
         cls()
         od()
         ts (s)

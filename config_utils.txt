@@ -9,8 +9,8 @@
 [9]
 [10]
 #end of names,start of corresponding websites //this line ALWAYS has to be line #11
-https://www.qbittorrent.org/download.php
-https://windirstat.net/download.html
+https://www.qbittorrent.org/download.php/
+https://windirstat.net/download.html/
 https://desktop.github.com/
 
 
