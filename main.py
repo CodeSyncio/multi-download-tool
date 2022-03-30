@@ -3,6 +3,7 @@ from time import sleep as ts
 from linecache import getline as gl
 from webbrowser import open_new_tab as nw
 curdir = os.getcwd()
+folderpath = curdir+'/configs'
 cext = curdir+'/configs/crome_extensions.conf'
 fext = curdir+'/configs/firefox_extensions.conf'
 cob = curdir+'/configs/blank.conf'
@@ -11,6 +12,7 @@ cg = curdir+'/configs/games.conf'
 conu = curdir+'/configs/utilitys.conf'
 browsrprocnames = curdir+'/configs/BrowserProcNames.conf'
 p = print
+foldrcheck = os.path.exists(folderpath)
 chromextcheck = os.path.exists(cext)
 firefextcheck = os.path.exists(fext)
 blankcheck = os.path.exists(cob)
@@ -21,17 +23,23 @@ procnamescheck = os.path.exists(browsrprocnames)
 if chromextcheck and firefextcheck and blankcheck and overclcheck and gamescheck and utilscheck and procnamescheck == True:
     pass
 else:
-    p('Not all config files are present and/or named correctly, more info:\n\n[True = file is present]\n[False = file is missing/named wrong]\n\n\n')
-    p('crome_extensions.conf = '+ str(chromextcheck))
-    p('firefox_extensions.conf = '+ str(firefextcheck))
-    p('blank.conf = '+ str(blankcheck))
-    p('overclocking.conf = '+ str(overclcheck))
-    p('games.conf = '+ str(gamescheck))
-    p('utilitys.conf = '+ str(utilscheck))
-    p('BrowserProcNames.conf = '+ str(procnamescheck))
-    p('\n\n')
-    tempfunc = input('Press enter to exit...')
-    quit()
+    if foldrcheck == True:
+        p('Not all config files are present and/or named correctly, more info:\n\n[True = file is present]\n[False = file is missing/named wrong]\n\n\n')
+        p('crome_extensions.conf = '+ str(chromextcheck))
+        p('firefox_extensions.conf = '+ str(firefextcheck))
+        p('blank.conf = '+ str(blankcheck))
+        p('overclocking.conf = '+ str(overclcheck))
+        p('games.conf = '+ str(gamescheck))
+        p('utilitys.conf = '+ str(utilscheck))
+        p('BrowserProcNames.conf = '+ str(procnamescheck))
+        p('\n\n')
+        tempfunc = input('Press enter to exit...')
+        quit()
+    else:
+        p('the folder ("configs") does not exist or is misnamed')
+        p('\n\n')
+        tempfunc = input('Press enter to exit...')
+        quit()
 def od():
     p('Opening Download(s) in ' + str(s) + ' second(s)')
 pe = 'press enter to choose another option...'
