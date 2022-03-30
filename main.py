@@ -1,8 +1,19 @@
+#start of all function defining , importing , ...
+
 import os          
 from time import sleep as ts
 from linecache import getline as gl
 from webbrowser import open_new_tab as nw
+p = print
 curdir = os.getcwd()
+def cls():                                         
+    os.system('cls' if os.name=='nt' else 'clear')     
+def cb() :
+    procnamescounter = 1
+    for number in range (10) :
+        os.system("taskkill /im " + gl(browsrprocnames,procnamescounter) +" /f") 
+        cls()
+        procnamescounter = procnamescounter + 1
 folderpath = curdir+'/configs'
 cext = curdir+'/configs/crome_extensions.conf'
 fext = curdir+'/configs/firefox_extensions.conf'
@@ -11,7 +22,10 @@ co = curdir+'/configs/overclocking.conf'
 cg = curdir+'/configs/games.conf'
 conu = curdir+'/configs/utilitys.conf'
 browsrprocnames = curdir+'/configs/BrowserProcNames.conf'
-p = print
+timesconfig = curdir+'/configs/timeouts.conf'
+
+#preperation for file verifier
+
 foldrcheck = os.path.exists(folderpath)
 chromextcheck = os.path.exists(cext)
 firefextcheck = os.path.exists(fext)
@@ -20,7 +34,22 @@ overclcheck = os.path.exists(co)
 gamescheck = os.path.exists(cg)
 utilscheck = os.path.exists(conu)
 procnamescheck = os.path.exists(browsrprocnames)
-if chromextcheck and firefextcheck and blankcheck and overclcheck and gamescheck and utilscheck and procnamescheck == True:
+timescheck = os.path.exists(timesconfig)
+
+
+#end of all function defining , importing , ...
+
+#start of file verifier
+
+if (chromextcheck 
+    and firefextcheck 
+    and blankcheck 
+    and overclcheck 
+    and gamescheck 
+    and utilscheck 
+    and procnamescheck
+    and timescheck) == True:
+    p('FILE CHECK PASSED')
     pass
 else:
     if foldrcheck == True:
@@ -32,6 +61,7 @@ else:
         p('games.conf = '+ str(gamescheck))
         p('utilitys.conf = '+ str(utilscheck))
         p('BrowserProcNames.conf = '+ str(procnamescheck))
+        p('timeouts.conf = '+ str(timescheck))
         p('\n\n')
         tempfunc = input('Press enter to exit...')
         quit()
@@ -40,19 +70,16 @@ else:
         p('\n\n')
         tempfunc = input('Press enter to exit...')
         quit()
+
+#end of file verifier
+
+#Start of defining main program
+s = int(gl(timesconfig,2))
 def od():
     p('Opening Download(s) in ' + str(s) + ' second(s)')
 pe = 'press enter to choose another option...'
-s = 1 #waiting time between pressing enters
 
-def cls():                                         
-    os.system('cls' if os.name=='nt' else 'clear')     
-def cb() :
-    procnamescounter = 1
-    for number in range (10) :
-        os.system("taskkill /im " + gl(browsrprocnames,procnamescounter) +" /f") 
-        cls()
-        procnamescounter = procnamescounter + 1
+
 def sm():
     cls()
     p ('[Choose a number corresponding to an option]')  
@@ -182,6 +209,11 @@ def sm():
         ts (s)
         nw('https://sites.google.com/view/district14/homepage')
         sm()
+
+#end of defining main program
+
+#start of porgram
+
 p('made by me :)')
 ts (1)
 cls()
