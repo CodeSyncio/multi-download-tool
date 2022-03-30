@@ -2,16 +2,18 @@ import os
 from time import sleep as ts
 from linecache import getline as gl
 from webbrowser import open_new_tab as nw
-cext = 'config_crome_extensions.txt'
-fext = 'config_firefox_extensions.txt'
-cob = 'config_blank.txt'
-co = 'config_overclocking.txt'
-cg = 'config_games.txt'
-browsrprocnames = 'BrowserProcNames.conf'
+curdir = os.getcwd()
+
+cext = curdir+'/configs/crome_extensions.conf'
+fext = curdir+'/configs/firefox_extensions.conf'
+cob = curdir+'/configs/blank.conf'
+co = curdir+'/configs/overclocking.conf'
+cg = curdir+'/configs/games.conf'
+conu = curdir+'/configs/utilitys.conf'
+browsrprocnames = curdir+'/configs/BrowserProcNames.conf'
 def od():
     p('Opening Download(s) in ' + str(s) + ' second(s)')
 pe = 'press enter to choose another option...'
-conu = 'config_utils.txt'
 s = 1 #waiting time between pressing enters
 p = print
 def cls():                                         
