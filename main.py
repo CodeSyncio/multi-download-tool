@@ -1,3 +1,16 @@
+#====INFO====#
+#I am far from being a perfect programmer, so some things might be very clumzy, but they work :o
+#i also know some of my code is very "unclean", i don't have the time to make all 
+#little details perfect.
+#====INFO FOR MYSELF LATER====
+#MADE IN 2022
+#30/03/2022 --- i am still very clumzy
+
+
+
+
+
+
 #start of all function defining , importing , ...
 
 import os          
