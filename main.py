@@ -3,7 +3,6 @@ from time import sleep as ts
 from linecache import getline as gl
 from webbrowser import open_new_tab as nw
 curdir = os.getcwd()
-
 cext = curdir+'/configs/crome_extensions.conf'
 fext = curdir+'/configs/firefox_extensions.conf'
 cob = curdir+'/configs/blank.conf'
@@ -11,11 +10,33 @@ co = curdir+'/configs/overclocking.conf'
 cg = curdir+'/configs/games.conf'
 conu = curdir+'/configs/utilitys.conf'
 browsrprocnames = curdir+'/configs/BrowserProcNames.conf'
+p = print
+chromextcheck = os.path.exists(cext)
+firefextcheck = os.path.exists(fext)
+blankcheck = os.path.exists(cob)
+overclcheck = os.path.exists(co)
+gamescheck = os.path.exists(cg)
+utilscheck = os.path.exists(conu)
+procnamescheck = os.path.exists(browsrprocnames)
+if chromextcheck and firefextcheck and blankcheck and overclcheck and gamescheck and utilscheck and procnamescheck == True:
+    pass
+else:
+    p('Not all config files are present and/or named correctly, more info:\n\n[True = file is present]\n[False = file is missing/named wrong]\n\n\n')
+    p('crome_extensions.conf = '+ str(chromextcheck))
+    p('firefox_extensions.conf = '+ str(firefextcheck))
+    p('blank.conf = '+ str(blankcheck))
+    p('overclocking.conf = '+ str(overclcheck))
+    p('games.conf = '+ str(gamescheck))
+    p('utilitys.conf = '+ str(utilscheck))
+    p('BrowserProcNames.conf = '+ str(procnamescheck))
+    p('\n\n')
+    tempfunc = input('Press enter to exit...')
+    quit()
 def od():
     p('Opening Download(s) in ' + str(s) + ' second(s)')
 pe = 'press enter to choose another option...'
 s = 1 #waiting time between pressing enters
-p = print
+
 def cls():                                         
     os.system('cls' if os.name=='nt' else 'clear')     
 def cb() :
@@ -24,9 +45,7 @@ def cb() :
         os.system("taskkill /im " + gl(browsrprocnames,procnamescounter) +" /f") 
         cls()
         procnamescounter = procnamescounter + 1
-    
 def sm():
-    
     cls()
     p ('[Choose a number corresponding to an option]')  
     p ('OPTIONS: \n \n \n')
@@ -155,8 +174,6 @@ def sm():
         ts (s)
         nw('https://sites.google.com/view/district14/homepage')
         sm()
-
-        
 p('made by me :)')
 ts (1)
 cls()
