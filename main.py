@@ -14,9 +14,9 @@
 #start of all function defining , importing , ...
 
 import os          
-from time import sleep as ts
-from linecache import getline as gl
-from webbrowser import open_new_tab as nw
+from time import sleep as sleep
+from linecache import getline as getl
+from webbrowser import open_new_tab as newbrowserproc
 
 if os.path.exists("latest_error_log.txt"):
       os.remove("latest_error_log.txt")
@@ -27,33 +27,33 @@ p = print
 curdir = os.getcwd()
 def cls():                                         
     os.system('cls' if os.name=='nt' else 'clear')     
-def cb() :
+def killbrowser() :
     procnamescounter = 1
     for number in range (10) :
-        os.system("taskkill /im " + gl(browsrprocnames,procnamescounter) +" /f") 
+        os.system("taskkill /im " + getl(path_browsrprocnames,procnamescounter) +" /f") 
         cls()
         procnamescounter = procnamescounter + 1
-folderpath = curdir+'/configs'
-cext = curdir+'/configs/crome_extensions.conf'
-fext = curdir+'/configs/firefox_extensions.conf'
-cob = curdir+'/configs/blank.conf'
-co = curdir+'/configs/overclocking.conf'
-cg = curdir+'/configs/games.conf'
-conu = curdir+'/configs/utilitys.conf'
-browsrprocnames = curdir+'/configs/BrowserProcNames.conf'
-timesconfig = curdir+'/configs/timeouts.conf'
+pathconfigfolder = curdir+'/configs'
+path_chrome_ext = curdir+'/configs/crome_extensions.conf'
+path_firefox_ext = curdir+'/configs/firefox_extensions.conf'
+path_blank = curdir+'/configs/blank.conf'
+path_overclocking = curdir+'/configs/overclocking.conf'
+path_games = curdir+'/configs/games.conf'
+path_utilitys = curdir+'/configs/utilitys.conf'
+path_browsrprocnames = curdir+'/configs/BrowserProcNames.conf'
+path_timeouts = curdir+'/configs/timeouts.conf'
 
 #preperation for file verifier
 
-foldrcheck = os.path.exists(folderpath)
-chromextcheck = os.path.exists(cext)
-firefextcheck = os.path.exists(fext)
-blankcheck = os.path.exists(cob)
-overclcheck = os.path.exists(co)
-gamescheck = os.path.exists(cg)
-utilscheck = os.path.exists(conu)
-procnamescheck = os.path.exists(browsrprocnames)
-timescheck = os.path.exists(timesconfig)
+foldrcheck = os.path.exists(pathconfigfolder)
+chromextcheck = os.path.exists(path_chrome_ext)
+firefoxextcheck = os.path.exists(path_firefox_ext)
+blankcheck = os.path.exists(path_blank)
+overclockcheck = os.path.exists(path_overclocking)
+gamescheck = os.path.exists(path_games)
+utilscheck = os.path.exists(path_utilitys)
+processnamescheck = os.path.exists(path_browsrprocnames)
+timescheck = os.path.exists(path_timeouts)
 
 
 #end of all function defining , importing , ...
@@ -61,12 +61,12 @@ timescheck = os.path.exists(timesconfig)
 #start of file verifier
 
 if (chromextcheck 
-    and firefextcheck 
+    and firefoxextcheck 
     and blankcheck 
-    and overclcheck 
+    and overclockcheck
     and gamescheck 
     and utilscheck 
-    and procnamescheck
+    and processnamescheck
     and timescheck) == True:
     p('FILE CHECK PASSED.')
     pass
@@ -78,23 +78,23 @@ else:
         logfile = open("latest_error_log.txt", "w")
         logfile.writelines(["LATEST OUTPUT OF FILE VERIFIER:", "\n\n[True = file was present]\n[False = file was missing/named wrong]",
                     "\n\ncrome_extensions.conf = " +str(chromextcheck),
-                    "\nfirefox_extensions.conf = " + str(firefextcheck),
+                    "\nfirefox_extensions.conf = " + str(firefoxextcheck),
                     "\nblank.conf = "+str(blankcheck),
-                    "\noverclocking.conf = "+ str(overclcheck),
+                    "\noverclocking.conf = "+ str(overclockcheck),
                     "\ngames.conf = "+ str(gamescheck),
                     "\nutilitys.conf = " + str(utilscheck),
-                    "\nBrowserProcNames.conf = "+str(procnamescheck),
+                    "\nBrowserProcNames.conf = "+str(processnamescheck),
                     "\ntimeouts.conf = "+ str(timescheck)])
         logfile.close()
         
         p('Not all config files are present and/or named correctly, more info:\n\n[True = file is present]\n[False = file is missing/named wrong]\n\n\n')
         p('crome_extensions.conf = '+ str(chromextcheck))
-        p('firefox_extensions.conf = '+ str(firefextcheck))
+        p('firefox_extensions.conf = '+ str(firefoxextcheck))
         p('blank.conf = '+ str(blankcheck))
-        p('overclocking.conf = '+ str(overclcheck))
+        p('overclocking.conf = '+ str(overclockcheck))
         p('games.conf = '+ str(gamescheck))
         p('utilitys.conf = '+ str(utilscheck))
-        p('BrowserProcNames.conf = '+ str(procnamescheck))
+        p('BrowserProcNames.conf = '+ str(processnamescheck))
         p('timeouts.conf = '+ str(timescheck))
         p('\n\n')
         
@@ -117,10 +117,10 @@ else:
 #end of file verifier
 
 #Start of defining main program
-s = int(gl(timesconfig,2))
-def od():
-    p('Opening Download(s) in ' + str(s) + ' second(s)')
-pe = 'press enter to choose another option...'
+timeout_seconds = int(getl(path_timeouts,2))
+def opendwnlds():
+    p('Opening Download(s) in ' + str(timeout_seconds) + ' second(s)')
+
 
 
 def sm():
@@ -136,27 +136,27 @@ def sm():
     p ('[9] my discord :)')
     Main = input()
     if Main == '1' :  
-        cb()      
+        killbrowser()      
         cls()
-        od()
-        ts (s)
+        opendwnlds()
+        sleep (timeout_seconds)
         cobcounter = 1
         for number in range(10):
-            nw(gl(cob, cobcounter))
+            newbrowserproc(getl(path_blank, cobcounter))
             cobcounter = cobcounter + 1
         sm()
     elif Main == '2' :
-        cb()      
+        killbrowser()      
         cls()
-        od()
-        ts (s)
+        opendwnlds()
+        sleep (timeout_seconds)
         gcounter = 1
         for number in range(10):
-                nw(gl(cg, gcounter))
+                newbrowserproc(getl(path_games, gcounter))
                 gcounter = gcounter + 1
         sm()
     elif Main == '3' : 
-        cb()   
+        killbrowser()   
         cls()
         p ('Choose wich browser... \n\n\n')
         p ('[1] Brave')
@@ -166,35 +166,35 @@ def sm():
         Brch = input()
         if Brch == '1':
             cls()
-            od()
-            ts (s)
-            nw('https://brave.com/download/')
+            opendwnlds()
+            sleep (timeout_seconds)
+            newbrowserproc('https://brave.com/download/')
             sm()
         elif Brch == '2':
             cls()
-            od()
-            ts (s)
-            nw('https://www.mozilla.org/nl/firefox/new/')
+            opendwnlds()
+            sleep (timeout_seconds)
+            newbrowserproc('https://www.mozilla.org/nl/firefox/new/')
             sm()
         elif Brch == '3':
             cls()
-            od()
-            ts (s)
-            nw('https://www.torproject.org/download/')
+            opendwnlds()
+            sleep (timeout_seconds)
+            newbrowserproc('https://www.torproject.org/download/')
             sm()
         elif Brch == '4':
             cls()
-            od()
-            ts (s)
-            nw('https://www.google.com/intl/en/chrome/')
+            opendwnlds()
+            sleep (timeout_seconds)
+            newbrowserproc('https://www.google.com/intl/en/chrome/')
             sm()
     elif Main == '4' :
-        cb()
+        killbrowser()
         cls()
         p ('Choose wich utility... \n\n\n')
         conunames = 1
         for number in range(10):
-            p (gl(conu,conunames))
+            p (getl(path_utilitys,conunames))
             conunames = conunames + 1
         uch = input()
         utilcounter = 1
@@ -202,25 +202,25 @@ def sm():
         for number in range(11):
             if int(uch) == utilcounter :
                 cls()
-                od()
-                ts (s)
+                opendwnlds()
+                sleep (timeout_seconds)
                 finallineutil = 11 +int(uch)
-                nw(gl(conu,finallineutil ))
+                newbrowserproc(getl(path_utilitys,finallineutil ))
                 sm()
             else:
                 utilcounter = utilcounter + 1
     elif Main == '5' :
-        cb()
+        killbrowser()
         cls()
-        od()
-        ts (s)
+        opendwnlds()
+        sleep (timeout_seconds)
         occounter = 1
         for number in range(10):
-            nw(gl(co, occounter))
+            newbrowserproc(getl(path_overclocking, occounter))
             occounter = occounter + 1
         sm()
     elif Main == '6' :
-        cb()
+        killbrowser()
         cls()
         p('Choose your browser: \n\n\n')
         p('[1] Any chromium based browser')
@@ -228,29 +228,29 @@ def sm():
         ExtOpt = input()
         if ExtOpt == '1':
             cls()
-            od()
-            ts (s)
+            opendwnlds()
+            sleep (timeout_seconds)
             extcounter = 1
             for number in range(10):
-                nw(gl(cext, extcounter))
+                newbrowserproc(getl(path_chrome_ext, extcounter))
                 extcounter = extcounter + 1
             sm()
         elif ExtOpt == '2':
             cls()
-            od()
-            ts (s)
+            opendwnlds()
+            sleep (timeout_seconds)
             extcounter = 1
             for number in range(10):
-                nw(gl(fext, extcounter))
+                newbrowserproc(getl(path_firefox_ext, extcounter))
                 extcounter = extcounter + 1
             sm()
         sm()
     elif Main == '9' :
-        cb()
+        killbrowser()
         cls()
-        od()
-        ts (s)
-        nw('https://sites.google.com/view/district14/homepage')
+        opendwnlds()
+        sleep (timeout_seconds)
+        newbrowserproc('https://sites.google.com/view/district14/homepage')
         sm()
 
 #end of defining main program
@@ -258,6 +258,6 @@ def sm():
 #start of porgram
 
 p('made by me :)')
-ts (1)
+sleep (1)
 cls()
 sm()
