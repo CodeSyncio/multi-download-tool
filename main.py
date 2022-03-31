@@ -17,6 +17,12 @@ import os
 from time import sleep as ts
 from linecache import getline as gl
 from webbrowser import open_new_tab as nw
+
+if os.path.exists("latest_error_log.txt"):
+      os.remove("latest_error_log.txt")
+else:
+  pass
+
 p = print
 curdir = os.getcwd()
 def cls():                                         
@@ -62,10 +68,25 @@ if (chromextcheck
     and utilscheck 
     and procnamescheck
     and timescheck) == True:
-    p('FILE CHECK PASSED')
+    p('FILE CHECK PASSED.')
     pass
+
 else:
+    
     if foldrcheck == True:
+        
+        logfile = open("latest_error_log.txt", "w")
+        logfile.writelines(["LATEST OUTPUT OF FILE VERIFIER:", "\n\n[True = file was present]\n[False = file was missing/named wrong]",
+                    "\n\ncrome_extensions.conf = " +str(chromextcheck),
+                    "\nfirefox_extensions.conf = " + str(firefextcheck),
+                    "\nblank.conf = "+str(blankcheck),
+                    "\noverclocking.conf = "+ str(overclcheck),
+                    "\ngames.conf = "+ str(gamescheck),
+                    "\nutilitys.conf = " + str(utilscheck),
+                    "\nBrowserProcNames.conf = "+str(procnamescheck),
+                    "\ntimeouts.conf = "+ str(timescheck)])
+        logfile.close()
+        
         p('Not all config files are present and/or named correctly, more info:\n\n[True = file is present]\n[False = file is missing/named wrong]\n\n\n')
         p('crome_extensions.conf = '+ str(chromextcheck))
         p('firefox_extensions.conf = '+ str(firefextcheck))
@@ -76,11 +97,20 @@ else:
         p('BrowserProcNames.conf = '+ str(procnamescheck))
         p('timeouts.conf = '+ str(timescheck))
         p('\n\n')
+        
         tempfunc = input('Press enter to exit...')
         quit()
+   
     else:
+        
+        logfile = open("latest_error_log.txt", "w")
+        logfile.writelines(["LATEST OUTPUT OF FILE VERIFIER:",
+                            "\n\n The folder 'configs' located in the root folder is misnamed/could noy be found.",
+                            "\n\n[True = file is present]\n[False = file is missing/named wrong]",
+                            "\n\nRaw error log:","\n\nconfigs = "+ str(foldrcheck)])
         p('the folder ("configs") does not exist or is misnamed')
         p('\n\n')
+        
         tempfunc = input('Press enter to exit...')
         quit()
 
